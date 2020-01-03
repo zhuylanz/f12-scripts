@@ -1,0 +1,34 @@
+{
+	"name": "f12-scripts",
+	"version": "1.0.0",
+	"description": "f12 scripts",
+	"main": "index.js",
+	"repository": "https://gitlab.com/zhuylanz/f12-scripts.git",
+	"author": "Lan Nguyen <zhuylanz@gmail.com>",
+	"license": "MIT",
+	"eslintConfig": {
+		"extends": "eslint:recommended",
+		"env": {
+			"es6": true,
+			"node": true,
+			"jest": true,
+			"jquery": true,
+			"browser": true
+		},
+		"rules": {
+			"no-unused-vars": [
+				"warn",
+				{
+					"ignoreRestSiblings": true
+				}
+			],
+			"no-console": 0
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019
+		}
+	},
+	"devDependencies": {
+		"eslint": "^6.8.0"
+	}
+}
