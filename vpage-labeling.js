@@ -1,6 +1,6 @@
-function startLabeling(number) {
-	removeOldLabels();
-	createLabels(number);
+async function startLabeling(number) {
+	// 	removeOldLabels();
+	await createLabels(number);
 }
 
 function removeOldLabels() {
@@ -16,19 +16,33 @@ function removeLabel(deleteButton) {
 	okButton.click();
 }
 
-function createLabels(max) {
-	for (let i = 1; i <= max; i++) {
-		createLabel(i);
+async function createLabels(max) {
+	for (let i = 29; i <= max; i++) {
+		await createLabel(i);
 	}
 }
 
-function createLabel(label) {
-	const addButton = "?";
+async function createLabel(label) {
+	const addButton = $(
+		"button.md-raised.md-green.md-sm.no-margin.md-button.md-ink-ripple"
+	);
 	addButton.click();
 
-	const labelInput = "?";
+	await sleep(2);
+
+	const labelInput = $("input[ng-model='tagName']");
 	labelInput.val(label);
 
-	const okButton = "?";
+	await sleep(2);
+
+	const okButton = $("button[ng-click='ok()']");
 	okButton.click();
+
+	await sleep(2);
+}
+
+function sleep(second) {
+	return new Promise(res => {
+		setTimeout(() => res(`slept ${second} second`), second * 1000);
+	});
 }
