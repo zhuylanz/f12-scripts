@@ -30,7 +30,7 @@ async function getAndClickInvites() {
 
 	for (let el of inviteButtonArr) {
 		el.click();
-		await sleep(1);
+		await sleep(0.5);
 	}
 }
 
