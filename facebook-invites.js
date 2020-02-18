@@ -25,7 +25,7 @@ async function getAndClickInvites() {
 	let inviteButtonArr = [];
 
 	document.querySelectorAll("a._42ft._4jy0._4jy3._517h._51sy").forEach(el => {
-		if (el.textContent == "Invite") {
+		if (el.textContent == "Invite" || el.textContent == "Mời") {
 			inviteButtonArr.push(el);
 		}
 	});
