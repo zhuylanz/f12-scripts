@@ -1,3 +1,5 @@
+run();
+
 async function run() {
 	let retries = 0;
 	while (retries < 3) {
