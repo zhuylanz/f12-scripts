@@ -38,9 +38,14 @@ async function getAndClickInvites() {
 }
 
 async function loadMore() {
-	document
-		.querySelectorAll("a.pam.uiBoxLightblue.uiMorePagerPrimary")[1]
-		.click();
+	const isMore = document.querySelectorAll(
+		"a.pam.uiBoxLightblue.uiMorePagerPrimary"
+	)[1];
+
+	if (isMore) {
+		isMore.click();
+	}
+
 	await sleep(1);
 }
 
