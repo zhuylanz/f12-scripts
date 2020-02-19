@@ -9,6 +9,7 @@ async function run() {
 			retries += 1;
 		}
 	}
+	console.log("> done");
 }
 
 function isMore() {
