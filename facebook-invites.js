@@ -33,6 +33,7 @@ async function getAndClickInvites() {
 
 	for (let el of inviteButtonArr) {
 		el.click();
+		console.log("invited!");
 		await sleep(0.5);
 	}
 }
