@@ -45,6 +45,7 @@ async function loadMore() {
 
 	if (isMore) {
 		isMore.click();
+		console.log("load more!");
 	}
 
 	await sleep(1);
