@@ -1,6 +1,7 @@
 main();
 
 async function main() {
+	inviteSuggestedUsers();
 	const names = [
 		"a",
 		"b",
@@ -68,12 +69,12 @@ async function main() {
 		"ty"
 	];
 
-	for (let name of names) {
-		typeIn(name);
-		await sleep(0.4);
-		inviteSuggestedUsers();
-		await sleep(0.4);
-	}
+	// for (let name of names) {
+	// 	typeIn(name);
+	// 	await sleep(0.4);
+	// 	inviteSuggestedUsers();
+	// 	await sleep(0.4);
+	// }
 }
 
 function typeIn(text) {}
